@@ -44,6 +44,10 @@ ul {
     gap: 2rem;
 }
 
+p {
+    font-family: var(--font-barlow);
+}
+
 a {
     text-decoration: none;
     color: var(--white);
@@ -123,7 +127,6 @@ header {
         }
 
         p {
-            font-family: var(--font-barlow);
             font-size: .9rem;
             color: var(--gray-blue);
             line-height: 1.5;
@@ -196,7 +199,6 @@ header {
         }
 
         p {
-            font-family: var(--font-barlow);
             line-height: 1.5;
             font-weight: 500;
         }
@@ -205,9 +207,58 @@ header {
 
 
 
+.team {
+    padding: 8em 5em;
+}
 
+.teamWrapper {
+    h3 {
+        text-align: center;
+        margin-bottom: 5em; 
+        font-family: var(--font-fraunces);
+        color: var(--grayish-blue);
+        letter-spacing: 5px;
+    }
+}
 
+.members {
+    display: flex;
+    gap: 1em;
+}
 
+.person {
+    padding-inline: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 3em;
+
+    img {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    p {
+        color: var(--darkGray-blue);
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+.name {
+    h4 {
+        font-family: var(--font-fraunces);
+        margin-bottom: .5em;
+    }
+
+    span {
+        color: var(--grayish-blue);
+        font-family: var(--font-barlow);
+        font-size: 0.9rem;
+    }
+}
 
 
 
