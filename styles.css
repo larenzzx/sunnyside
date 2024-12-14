@@ -60,8 +60,15 @@ a.btn {
     text-transform: uppercase;
     background-color: var(--white);
     color: var(--dark-blue);
+    font-weight: 600;
     padding: .5em 1.2em;
     border-radius: 2em;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: rgba(114, 208, 255, 255);
+        color: var(--white);
+    }
 }
 
 
@@ -295,6 +302,11 @@ footer {
             color: hsl(168, 34%, 41%);
             font-weight: 500;
             font-size: 0.9rem;
+            transition: all .3s ease;
+
+            &:hover {
+                color: var(--white);
+            }
         }
     }
 
@@ -303,6 +315,16 @@ footer {
         display: flex;
         gap: 1em;
     }
+
+    .social svg path {
+        transition: fill 0.3s ease; /* Smooth color transition */
+    }
+    
+    .social svg:hover path {
+        cursor: pointer;
+        fill: var(--white); /* Change the fill color on hover */
+    }
+
 }
 
 
