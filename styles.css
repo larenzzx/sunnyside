@@ -37,6 +37,22 @@ html {
     scroll-behavior: smooth; 
 }
 
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.menu {
+    display: none;
+}
+
+i {
+    font-size: var(--size-lg);
+    font-weight: 600;
+    color: var(--white);
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -103,14 +119,12 @@ header {
     grid-template-rows: repeat(3, 500px);
 }
 
-.box {
+.box:nth-child(2) {
+    background: url(images/desktop/image-transform.jpg) center / cover no-repeat;
+}
 
-
-    img {
-        width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    }
+.box:nth-child(3) {
+    background: url(images/desktop/image-stand-out.jpg) center / cover no-repeat;
 }
 
 .box:nth-child(1),
@@ -272,13 +286,20 @@ header {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.gallery {
+.gallery:nth-child(1) {
+    background: url(images/desktop/image-gallery-milkbottles.jpg) center / cover no-repeat;
+}
 
-    img {
-        object-fit: cover;
-        width: 100%; 
-        height: 100%;
-    }
+.gallery:nth-child(2) {
+    background: url(images/desktop/image-gallery-orange.jpg) center / cover no-repeat;
+}
+
+.gallery:nth-child(3) {
+    background: url(images/desktop/image-gallery-cone.jpg) center / cover no-repeat;
+}
+
+.gallery:nth-child(4) {
+    background: url(images/desktop/image-gallery-sugarcubes.jpg) center / cover no-repeat;
 }
 
 
@@ -326,6 +347,11 @@ footer {
     }
 
 }
+
+
+/* hamburger menu */
+
+
 
 
 
@@ -392,6 +418,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    .home {
+        background: url(images/mobile/image-header.jpg) bottom / cover no-repeat;
+        /* padding-bottom: 20em; */
+    }
+
+
     .about {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 500px);
@@ -408,6 +440,14 @@ footer {
         grid-area: one;
     }
 
+    .box:nth-child(2) {
+        background: url(images/mobile/image-transform.jpg) center / cover no-repeat;
+    }
+    
+    .box:nth-child(3) {
+        background: url(images/mobile/image-stand-out.jpg) center / cover no-repeat;
+    }
+
     .box:nth-child(1),
     .box:nth-child(4) {
         padding-inline: 8em;
@@ -419,9 +459,83 @@ footer {
             text-align: center;
         }
     }
+
+    .members {
+        flex-direction: column;
+        gap: 5em;
+    }
     
+    .images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    .gallery:nth-child(1) {
+        background: url(images/mobile/image-gallery-milkbottles.jpg) center / cover no-repeat;
+    }
+    
+    .gallery:nth-child(2) {
+        background: url(images/mobile/image-gallery-orange.jpg) center / cover no-repeat;
+    }
+    
+    .gallery:nth-child(3) {
+        background: url(images/mobile/image-gallery-cone.jpg) center / cover no-repeat;
+    }
+    
+    .gallery:nth-child(4) {
+        background: url(images/mobile/image-gallery-sugar-cubes.jpg) center / cover no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+        background-color: var(--white);
+        /* background-color: red; */
+        width: 90%;
+        padding: 3em;
+
+        li a {
+            color: var(--grayish-blue);
+            font-weight: 600;
+        }
+    }
+
+    ul::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 99%;
+        border: 25px solid;
+        border-color: #0000 var(--white) var(--white) #0000;
+    }
+
+    a.btn {
+        background-color: var(--yelow);
+    }
+
+    .menu {
+        display: block;
+        position: relative;
+        
+        i:hover {
+            color: var(--dark-blue);
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
+    /* .box.berry {
+        background: url(images/desktop/image-graphic-design.jpg) top / cover no-repeat;
+    }
     
+    .box.orange {
+        background: url(images/desktop/image-photography.jpg) top / cover no-repeat;
+    } */
 }
