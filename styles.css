@@ -14,8 +14,22 @@
     --font-fraunces: "Fraunces", serif;
     --font-barlow: "Barlow", sans-serif;
 
-    /* font size */
-    --size-lg: 1.125rem; /* 18px*/
+    /* sizes */
+    --size-xxs: 0.5rem; 
+    --size-xs: 0.75rem; 
+    --size-sm: 0.875rem; 
+    --size-base: 1rem; 
+    --size-lg: 1.125rem; 
+    --size-xl: 1.25rem; 
+    --size-2xl: 1.5rem; 
+    --size-3xl: 1.875rem; 
+    --size-4xl: 2.25rem; 
+    --size-5xl: 3rem; 
+    --size-6xl: 3.75rem; 
+    --size-7xl: 4.5rem; 
+    --size-8xl: 6rem; 
+    --size-9xl: 8rem; 
+    --size-10xl: 10rem; 
 
     /* === colors === */
     /* primary */
@@ -104,8 +118,14 @@ header {
         letter-spacing: .3em;
         color: var(--white);
         font-family: var(--font-fraunces);
-        font-weight: 700;
+        font-weight: 900;
     }
+
+    .mobile_header {
+        display: none;
+    }
+
+    
 }
 
 .home {
@@ -489,6 +509,11 @@ footer {
 
 
 @media screen and (max-width: 680px) {
+    .home {
+        background: url(images/mobile/image-header.jpg) bottom / cover no-repeat;
+        /* padding-bottom: 15em; */
+    }
+
     ul {
         display: none;
         position: absolute;
@@ -528,14 +553,167 @@ footer {
             color: var(--dark-blue);
         }
     }
+
+    .hero {
+        .mobile_header {
+            display: block;
+            font-size: var(--size-5xl);
+            margin-bottom: 1em;
+        }
+
+        h1 {
+            display: none;
+        }
+    }
+
+    .box:nth-child(1),
+    .box:nth-child(4) {
+        padding-inline: 4em;
+    }
+
+    .team {
+        padding: 8em 4em;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    /* .box.berry {
-        background: url(images/desktop/image-graphic-design.jpg) top / cover no-repeat;
+    .team {
+        padding: 6em 2em;
     }
     
+    .teamWrapper {
+        h3 {
+            font-size: var(--size-lg);
+        }
+    }
+
+    .person {
+        p {
+            font-size: var(--size-base);
+        }
+    }
+
+    .home {
+        background: url(images/mobile/image-header.jpg) bottom / cover no-repeat;
+        padding-bottom: 10em;
+    }
+    
+    .hero {
+        .mobile_header {
+            display: block;
+            font-size: var(--size-4xl);
+            margin-bottom: 1em;
+        }
+    }
+
+    .box:nth-child(1),
+    .box:nth-child(4) {
+        padding-inline: 2em;
+
+        .container {
+            h2 {
+                font-size: var(--size-4xl);
+            }
+    
+            p {
+                font-size: var(--size-lg);
+            }
+    
+            h4 {
+                font-size: var(--size-lg);
+            }
+        }
+    }
+
+    .box.berry,
     .box.orange {
-        background: url(images/desktop/image-photography.jpg) top / cover no-repeat;
-    } */
+        /* padding: 1em 3em; */
+
+        .wrapper {
+
+            p {
+                margin-bottom: 3em;
+                font-size: var(--size-base);
+            }
+        }
+    }
+
+    .images {
+        grid-template-rows: repeat(2, 200px);
+    }
+
+
+    footer {
+        padding: 5em 0;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .team {
+        padding: 6em 1em;
+    }
+    
+    .teamWrapper {
+        h3 {
+            font-size: var(--size-base);
+        }
+    }
+
+    .person {
+        p {
+            font-size: var(--size-sm);
+        }
+    }
+
+    .hero {
+        .mobile_header {
+            display: block;
+            font-size: var(--size-3xl);
+        }
+    }
+
+    .box:nth-child(1),
+    .box:nth-child(4) {
+        padding-inline: 1em;
+
+        .container {
+            h2 {
+                font-size: var(--size-3xl);
+            }
+    
+            p {
+                font-size: var(--size-base);
+            }
+    
+            h4 {
+                font-size: var(--size-base);
+            }
+        }
+    }
+
+    .box.berry,
+    .box.orange {
+        padding: 1em;
+
+        .wrapper {
+
+            p {
+                margin-bottom: 2em;
+                font-size: var(--size-sm);
+            }
+        }
+    }
+
+
+    .images {
+        grid-template-rows: repeat(2, 150px);
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .teamWrapper {
+        h3 {
+            font-size: var(--size-sm);
+        }
+    }
 }
