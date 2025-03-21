@@ -1,4 +1,4 @@
-(./design/desktop-preview.jpg)
+A simple landing page
 
 
 
